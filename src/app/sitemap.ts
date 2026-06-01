@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { TOOLS, CATEGORY_META } from '@/lib/registry';
 
+export const dynamic = 'force-static';
+
 const BASE_URL = 'https://devtoolkit.app'; // Update this to your actual domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
