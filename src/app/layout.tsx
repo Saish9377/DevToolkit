@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import './globals.css';
 import AppShell from '@/components/layout/AppShell';
 
@@ -73,6 +72,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1829307111613201"
+          crossOrigin="anonymous"
+        />
         {/* Site-wide JSON-LD */}
         <script
           type="application/ld+json"
@@ -96,12 +101,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1829307111613201"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <AppShell>{children}</AppShell>
       </body>
     </html>
